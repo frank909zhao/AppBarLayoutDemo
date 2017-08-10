@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.frank.supportdesigndemo.floatingbutton.FabActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_fab" />
+
+    <com.frank.supportdesigndemo.coordinatorlayout.DependencyView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="test"
+        android:background="#0f0"
+        android:layout_gravity="left"
+        app:layout_insetEdge="top"/>
+    <com.frank.supportdesigndemo.coordinatorlayout.DependencyView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="test1"
+        android:background="#f00"
+        android:layout_gravity="center"
+        app:layout_dodgeInsetEdges="top"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+
+</android.support.design.widget.CoordinatorLayout>
